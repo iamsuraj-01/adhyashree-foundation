@@ -344,6 +344,215 @@ footer .link-animated a:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+/* History Area Section Styles */
+.history-area {
+  background-color: #FFFFFF;
+  padding: 50px 0;
+  /* Image Gallery Styling */
+}
+.history-area h2 {
+  font-size: 2.2rem;
+  font-family: "Heebo", sans-serif;
+  color: #031550;
+  letter-spacing: 0.2rem;
+}
+.history-area h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: "Heebo", sans-serif;
+  color: #ffb200;
+  line-height: 1.2;
+}
+.history-area p {
+  font-size: 1.1rem;
+  font-family: "Nunito", sans-serif;
+  text-align: justify;
+  line-height: 1.75;
+  color: #212529;
+}
+.history-area .vertical-img-container {
+  height: 400px; /* Set height for the vertical image */
+  overflow: hidden;
+}
+.history-area .horizontal-img-container {
+  height: 200px; /* Set height for the horizontal images */
+  overflow: hidden;
+}
+.history-area .vertical-img-container img,
+.history-area .horizontal-img-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover; /* Ensure image fills container without distortion */
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+}
+
+/* Feature */
+.feature-area {
+  position: relative;
+  background-color: #ffb200; /* Yellow background */
+  padding: 50px 0;
+  overflow: hidden;
+  /* Bottom Shape Styling */
+  /* Feature Item Styling */
+  /* Feature Icon Styling */
+}
+.feature-area .top-shape {
+  position: absolute;
+  width: 100%; /* Full width */
+  height: auto; /* Maintain aspect ratio */
+  top: 0; /* Align directly to the top */
+  left: 0; /* Align to the left */
+  transform: scaleX(-1) scaleY(-1); /* Flip both horizontally and vertically */
+  z-index: 0; /* Ensure it's behind other content */
+}
+.feature-area .bottom-shape {
+  position: absolute;
+  width: 100%; /* Cover full section width */
+  height: 100px; /* Set a fixed height for uniformity */
+  bottom: -2px; /* Align slightly below the bottom */
+  left: 0;
+  transform: none; /* Keep the original alignment */
+  z-index: 0; /* Ensure it stays behind other elements */
+}
+.feature-area .feature-item {
+  background-color: transparent; /* No background color */
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: none; /* Remove shadow effect */
+  transition: 0.3s ease;
+}
+.feature-area .feature-icon {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  flex: 0 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Shadow effect around icon */
+}
+.feature-area h4 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700; /* Bold heading */
+  font-size: 1.1rem;
+  color: #031550; /* Dark color for heading */
+  margin-bottom: 10px;
+}
+.feature-area p {
+  font-family: "Nunito", sans-serif;
+  font-size: 0.95rem;
+  color: #212529;
+  line-height: 1.5;
+}
+
+.featured-causes {
+  background-color: #FFFFFF;
+  padding: 50px 0;
+}
+.featured-causes h2 {
+  font-size: 2.5rem;
+  color: #031550;
+  font-family: "Heebo", sans-serif;
+}
+.featured-causes p.lead {
+  font-size: 1.1rem;
+  color: #212529;
+  margin-bottom: 50px;
+  font-family: "Nunito", sans-serif;
+}
+.featured-causes .cause-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+}
+.featured-causes .cause-item img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+.featured-causes .cause-item:hover img {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+.featured-causes .cause-item .cause-text {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05); /* Light shadow effect */
+  margin-top: -5px; /* Overlap text slightly */
+  transition: background 0.3s ease-in-out;
+}
+.featured-causes .cause-item .cause-text h5 {
+  font-size: 1.2rem;
+  color: #031550;
+  font-family: "Heebo", sans-serif;
+  font-weight: 700;
+}
+.featured-causes .cause-item .cause-text p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-family: "Nunito", sans-serif;
+  color: #212529;
+}
+.featured-causes .cause-item .cause-text:hover {
+  background: #FFFFFF; /* On hover, make text box solid white */
+}
+@media (max-width: 768px) {
+  .featured-causes h2,
+  .featured-causes p.lead {
+    text-align: center; /* Center align text on smaller screens */
+  }
+  .featured-causes .cause-item {
+    margin-bottom: 30px; /* Adjust spacing */
+  }
+}
+
+/* Facts Section Styling */
+.facts-section {
+  background-color: #ffb200; /* Set to yellow background */
+  padding: 50px 0;
+  /* Responsive Adjustments */
+}
+.facts-section .fact-item {
+  background-color: rgba(255, 255, 255, 0.1); /* Light transparent background */
+  border-radius: 15px;
+  transition: 0.3s ease-in-out;
+  text-align: center;
+}
+.facts-section .fact-item:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Darker on hover */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15); /* Light shadow effect */
+}
+.facts-section .fact-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Shadow effect */
+}
+.facts-section h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+.facts-section p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 0;
+}
+@media (max-width: 768px) {
+  .facts-section .fact-item {
+    margin-bottom: 30px;
+  }
+}
+
 /* Banner *
 .banner {
     background-size: cover;
@@ -535,6 +744,38 @@ footer .link-animated a:hover {
   .carousel .carousel-control-next {
     display: none;
   }
+  /* About */
+  .history-area {
+    padding: 30px 0;
+  }
+  .history-area .vertical-img-container {
+    height: 150px; /* Adjust height for mobile */
+  }
+  .history-area .horizontal-img-container {
+    height: 150px; /* Adjust height for mobile */
+  }
+  .history-area h2,
+  .history-area h1,
+  .history-area p {
+    text-align: justify;
+  }
+  .history-area .btn-theme {
+    margin: 0 auto; /* Center button on mobile */
+    padding: 15px 20px 15px 20px;
+  }
+  /* Features */
+  .feature-item {
+    margin-bottom: 30px;
+  }
+  .top-shape,
+  .bottom-shape {
+    height: 70px !important;
+  }
+  .feature-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
 }
 /* Desktops Only */
 @media (min-width: 992px) {
@@ -560,14 +801,15 @@ footer .link-animated a:hover {
        }
    }
 
-   /* Facts Counter *
-   .facts {
-       position: relative;
-       margin-top: -75px;
-       z-index: 1;
-   }
-
-   /* Footer */
+   /* Facts Counter */
+  .facts {
+    position: relative;
+    z-index: 1;
+  }
+  .facts .fact-item {
+    margin-bottom: 30px;
+  }
+  /* Footer */
   .footer {
     padding: 30px 0;
   }
