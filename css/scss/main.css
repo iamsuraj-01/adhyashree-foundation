@@ -344,133 +344,148 @@ footer .link-animated a:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Banner */
+/* Banner *
 .banner {
-  background-size: cover;
-  margin-bottom: 90px;
+    background-size: cover;
+    margin-bottom: 90px;
 }
 
-/* Service */
+/* Service *
 .service-item {
-  position: relative;
-  height: 300px;
-  padding: 0 30px;
-  transition: bottom 0.5s, opacity 0.5s;
-}
-.service-item .service-icon {
-  margin-bottom: 30px;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #06A3DA;
-  border-radius: 2px;
-  transform: rotate(-45deg);
-}
-.service-item .service-icon .text-white {
-  transform: rotate(45deg);
-}
-.service-item a.btn {
-  position: absolute;
-  width: 60px;
-  bottom: -48px;
-  left: 50%;
-  margin-left: -30px;
-  opacity: 0;
-  transition: bottom 0.5s, opacity 0.5s;
-}
-.service-item:hover a.btn {
-  bottom: -24px;
-  opacity: 1;
+    position: relative;
+    height: 300px;
+    padding: 0 30px;
+    transition: bottom .5s, opacity .5s; // Specify properties to transition
+
+    .service-icon {
+        margin-bottom: 30px;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $theme;
+        border-radius: 2px;
+        transform: rotate(-45deg);
+
+        .text-white {
+            transform: rotate(45deg);
+        }
+    }
+
+    a.btn {
+        position: absolute;
+        width: 60px;
+        bottom: -48px;
+        left: 50%;
+        margin-left: -30px;
+        opacity: 0;
+        transition: bottom .5s, opacity .5s; // Ensure button transition matches
+    }
+
+    &:hover a.btn {
+        bottom: -24px;
+        opacity: 1;
+    }
 }
 
-/* Gallery */
-.gallery .box {
-  width: 350px;
-  overflow: hidden;
-}
-.gallery .box .slide-img {
-  width: 100%;
-  height: 350px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  box-sizing: border-box;
+/* Gallery *
+.gallery {
+    .box {
+        width: 350px;
+        overflow: hidden;
+        .slide-img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            box-sizing: border-box;
+        }
+    }
 }
 
-/* Team */
+/* Team *
 .team-item {
-  transition: 0.5s;
-}
-.team-item .team-social {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.5s;
-}
-.team-item .team-social a.btn {
-  position: relative;
-  margin: 0 3px;
-  margin-top: 100px;
-  opacity: 0;
-}
-.team-item:hover {
-  box-shadow: 0 0 30px #DDDDDD;
-}
-.team-item:hover .team-social {
-  background: rgba(9, 30, 62, 0.7);
-}
-.team-item:hover .team-social a.btn {
-  opacity: 1;
-  margin-top: 0;
-  transition: 0.3s;
-}
-.team-item:hover .team-social a.btn:nth-child(2) {
-  transition-delay: 0.05s;
-}
-.team-item:hover .team-social a.btn:nth-child(3) {
-  transition-delay: 0.1s;
-}
-.team-item:hover .team-social a.btn:nth-child(4) {
-  transition-delay: 0.15s;
+    transition: .5s;
+
+    .team-social {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .5s;
+
+        a.btn {
+            position: relative;
+            margin: 0 3px;
+            margin-top: 100px;
+            opacity: 0;
+        }
+    }
+
+    &:hover {
+        box-shadow: 0 0 30px #DDDDDD;
+    }
+
+    &:hover .team-social {
+        background: rgba(9, 30, 62, .7);
+    }
+
+    &:hover .team-social a.btn {
+        opacity: 1;
+        margin-top: 0;
+        transition: .3s;
+    }
+
+    &:hover .team-social a.btn:nth-child(2) {
+        transition-delay: .05s;
+    }
+
+    &:hover .team-social a.btn:nth-child(3) {
+        transition-delay: .1s;
+    }
+
+    &:hover .team-social a.btn:nth-child(4) {
+        transition-delay: .15s;
+    }
 }
 
-/* Testimonial */
-.testimonial-carousel .owl-dots {
-  margin-top: 15px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-.testimonial-carousel .owl-dot {
-  position: relative;
-  display: inline-block;
-  margin: 0 5px;
-  width: 15px;
-  height: 15px;
-  background: #DDDDDD;
-  border-radius: 2px;
-  transition: 0.5s;
-}
-.testimonial-carousel .owl-dot.active {
-  width: 30px;
-  background: #06A3DA;
-}
-.testimonial-carousel .owl-item.center {
-  position: relative;
-  z-index: 1;
-}
-.testimonial-carousel .owl-item .testimonial-item {
-  transition: 0.5s;
-}
-.testimonial-carousel .owl-item.center .testimonial-item {
-  background: #FFFFFF;
-  box-shadow: 0 0 20px #DDDDDD;
+/* Testimonial *
+.testimonial-carousel{
+    .owl-dots {
+        margin-top: 15px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    .owl-dot {
+        position: relative;
+        display: inline-block;
+        margin: 0 5px;
+        width: 15px;
+        height: 15px;
+        background: #DDDDDD;
+        border-radius: 2px;
+        transition: .5s;
+        &.active {
+            width: 30px;
+            background: $theme;
+        }
+    }
+    .owl-item.center {
+        position: relative;
+        z-index: 1;
+    }
+    .owl-item .testimonial-item {
+        transition: .5s;
+    }
+    .owl-item.center .testimonial-item {
+        background: #FFFFFF;
+        box-shadow: 0 0 20px #DDDDDD;
+    }
 }
 
 /* Media Queries */
@@ -538,92 +553,22 @@ footer .link-animated a:hover {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     z-index: 999;
   }
-  /* Gallery */
-  .gallery .box {
-    margin: -15px;
-  }
-  /* Facts Counter */
-  .facts {
-    position: relative;
-    margin-top: -75px;
-    z-index: 1;
-  }
-  /* Footer */
+  /* Gallery *
+   .gallery {
+       .box {
+           margin: -15px;
+       }
+   }
+
+   /* Facts Counter *
+   .facts {
+       position: relative;
+       margin-top: -75px;
+       z-index: 1;
+   }
+
+   /* Footer */
   .footer {
     padding: 30px 0;
-  }
-}
-/* Theme Switcher (Dark Mode) */
-/* Dark Theme Variables */
-body.dark-mode {
-  /* Override styles for dark mode */
-  background-color: #121212;
-  color: #ffffff;
-  /* Common Section Styles for Dark Mode */
-  /* Testimonial Carousel for Dark Mode */
-  /* Team Section for Dark Mode */
-  /* Form Controls for Dark Mode */
-  /* Blog Pagination for Dark Mode */
-  /* Sticky Top Navbar for Dark Mode */
-  /* Responsive Styles for Dark Mode (Smartphones and Tablets) */
-}
-body.dark-mode .bg-white {
-  background-color: #121212 !important;
-}
-body.dark-mode .text-dark {
-  color: #ffffff !important;
-}
-body.dark-mode .bg-light {
-  background-color: #1e1e1e !important;
-}
-body.dark-mode .shadow {
-  box-shadow: 0 0 30px #333333 !important;
-}
-body.dark-mode .btn-outline-dark {
-  color: #ffffff !important;
-  border-color: #ffffff !important;
-}
-body.dark-mode .navbar,
-body.dark-mode footer,
-body.dark-mode .carousel-caption,
-body.dark-mode .testimonial-item,
-body.dark-mode .service-item,
-body.dark-mode .gallery .box,
-body.dark-mode .team-item,
-body.dark-mode .blog-item {
-  background-color: #121212;
-  color: #ffffff;
-}
-body.dark-mode .testimonial-carousel .owl-item.center .testimonial-item {
-  background-color: #121212 !important;
-  box-shadow: 0 0 30px #333333;
-}
-body.dark-mode .team-item:hover {
-  box-shadow: 0 0 30px #333333;
-}
-body.dark-mode .form-control,
-body.dark-mode .form-select {
-  background-color: #121212;
-  color: #ffffff;
-}
-body.dark-mode .form-control::-moz-placeholder, body.dark-mode .form-select::-moz-placeholder {
-  color: #ffffff;
-}
-body.dark-mode .form-control::placeholder,
-body.dark-mode .form-select::placeholder {
-  color: #ffffff;
-}
-body.dark-mode .page-link {
-  background-color: #121212 !important;
-}
-body.dark-mode .page-link:active {
-  background-color: #06A3DA;
-}
-body.dark-mode .sticky-top.navbar .navbar-nav .nav-link {
-  color: #ffffff;
-}
-@media (max-width: 991.98px) {
-  body.dark-mode .navbar .navbar-nav .nav-link, body.dark-mode .navbar .navbar-nav .nav-link.show {
-    color: #ffffff;
   }
 }/*# sourceMappingURL=main.css.map */
