@@ -1,16 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap");
 
 /* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Nunito", sans-serif;
+    font-family: "Heebo", "Nunito", sans-serif; /* Updated to include Heebo */
 }
+
   
 /* Theme Variables */
-$theme: #06A3DA; // theme color
-$theme-secondary: #0b5ed7; // Secondary theme color
+$theme: #ffb200; // theme color
+$theme-secondary: #031550; // Secondary theme color
 $white: #FFFFFF; // White color
 $dark: #212529; // Dark color
 
@@ -100,6 +101,7 @@ a {
     color: $white;
     background-color: $theme;
     border-color: $theme;
+    border-radius: 50px;
 
     &:hover {
         color: $white;
@@ -241,7 +243,7 @@ a {
 /* Navbar */
 .navbar {
     .navbar-brand img {
-        width: 65px;
+        width: 130px;
         height: auto;
         max-width: 100%;
         pointer-events: none; /* Prevents clicking to protect logo from being downloaded */
@@ -365,11 +367,10 @@ footer {
             .carousel-caption {
                 position: absolute;
                 top: 50%;
-                left: 50%; // 50% centers the carousel caption by default (adjust percentage to move left or right)
+                left: 30%; // 50% centers the carousel caption by default (adjust percentage to move left or right)
                 transform: translate(-50%, -50%);
-                text-align: center;
                 z-index: 2; // Ensure the caption is above the overlay
-                width: 50%; // Ensure it scales well on different screen sizes
+                width: 43%; // Ensure it scales well on different screen sizes
                 padding: 0 15px; // Add some padding to ensure content doesn't touch edges
 
                 h1 {
@@ -392,6 +393,7 @@ footer {
         }
     }
 }
+
 
 /* Banner *
 .banner {
@@ -559,7 +561,7 @@ footer {
         /* Navbar Brand */
         .navbar-brand {
             img {
-                width: 60px;
+                width: 80px;
                 max-width: 100%;
                 height: auto;
             }

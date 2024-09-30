@@ -1,29 +1,29 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap");
 /* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Nunito", sans-serif;
+  font-family: "Heebo", "Nunito", sans-serif; /* Updated to include Heebo */
 }
 
 /* Theme Variables */
 /* Background Colors */
 .bg-theme {
-  background: #06A3DA;
+  background: #ffb200;
 }
 
 .bg-secondary-theme {
-  background: #0b5ed7;
+  background: #031550;
 }
 
 /* Text Colors */
 .text-theme {
-  color: #06A3DA;
+  color: #ffb200;
 }
 
 .text-secondary-theme {
-  color: #0b5ed7;
+  color: #031550;
 }
 
 /* Text Alignment */
@@ -100,13 +100,14 @@ a {
 
 .btn-theme {
   color: #FFFFFF;
-  background-color: #06A3DA;
-  border-color: #06A3DA;
+  background-color: #ffb200;
+  border-color: #ffb200;
+  border-radius: 50px;
 }
 .btn-theme:hover {
   color: #FFFFFF;
-  background-color: #0b5ed7;
-  border-color: #0b5ed7;
+  background-color: #031550;
+  border-color: #031550;
 }
 
 .btn-square, .btn-sm-square, .btn-lg-square {
@@ -148,7 +149,7 @@ a {
 .spinner {
   width: 40px;
   height: 40px;
-  background: #06A3DA;
+  background: #ffb200;
   margin: 100px auto;
   animation: sk-rotateplane 1.2s infinite ease-in-out;
 }
@@ -195,7 +196,7 @@ a {
   height: 3px;
   bottom: 0;
   left: 0; /* Start from the left */
-  background: #06A3DA;
+  background: #ffb200;
   border-radius: 2px;
 }
 .section-title.text-center::before {
@@ -210,7 +211,7 @@ a {
   box-shadow: inset 0 0 0 50px transparent;
 }
 .hover-fill:hover {
-  box-shadow: inset 0 0 0 0 #06A3DA;
+  box-shadow: inset 0 0 0 0 #ffb200;
 }
 
 /* Zoom In Effect */
@@ -223,7 +224,7 @@ a {
 
 /* Navbar */
 .navbar .navbar-brand img {
-  width: 65px;
+  width: 130px;
   height: auto;
   max-width: 100%;
   pointer-events: none; /* Prevents clicking to protect logo from being downloaded */
@@ -239,14 +240,14 @@ a {
   transition: 0.5s;
 }
 .navbar .navbar-nav .nav-link:hover, .navbar .navbar-nav .nav-link.active {
-  color: #06A3DA;
+  color: #ffb200;
 }
 .navbar .navbar-nav .show > .nav-link {
-  color: #06A3DA;
+  color: #ffb200;
 }
 .navbar .navbar-toggler {
-  color: #06A3DA !important;
-  border-color: #06A3DA !important;
+  color: #ffb200 !important;
+  border-color: #ffb200 !important;
 }
 .navbar .navbar-toggler:focus {
   box-shadow: none;
@@ -256,7 +257,7 @@ a {
   border-radius: 0;
 }
 .navbar .dropdown-menu .dropdown-item {
-  background-color: #06A3DA;
+  background-color: #ffb200;
   color: #FFFFFF;
   border-bottom: 1px solid #FFFFFF;
   text-align: center;
@@ -264,12 +265,12 @@ a {
   transition: 0.5s;
 }
 .navbar .dropdown-menu .dropdown-item:hover {
-  background-color: #0b5ed7;
+  background-color: #031550;
   color: #FFFFFF;
 }
 .navbar .dropdown-menu .dropdown-item.active, .navbar .dropdown-menu .dropdown-item:active {
   color: #FFFFFF;
-  background-color: #0b5ed7;
+  background-color: #031550;
 }
 
 .sticky-top.navbar .navbar-nav .nav-link {
@@ -277,7 +278,7 @@ a {
   color: #212529;
 }
 .sticky-top.navbar .navbar-nav .nav-link:hover, .sticky-top.navbar .navbar-nav .nav-link.active {
-  color: #06A3DA;
+  color: #ffb200;
 }
 
 /* Footer */
@@ -320,11 +321,10 @@ footer .link-animated a:hover {
 .carousel .carousel-inner .carousel-item .carousel-caption {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 30%;
   transform: translate(-50%, -50%);
-  text-align: center;
   z-index: 2;
-  width: 50%;
+  width: 43%;
   padding: 0 15px;
 }
 .carousel .carousel-inner .carousel-item .carousel-caption h1 {
@@ -506,7 +506,7 @@ footer .link-animated a:hover {
     /* Navbar Link */
   }
   .navbar .navbar-brand img {
-    width: 60px;
+    width: 80px;
     max-width: 100%;
     height: auto;
   }
