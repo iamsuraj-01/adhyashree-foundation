@@ -186,22 +186,18 @@ a {
 
 /* Section Title */
 .section-title {
-  position: relative;
-  padding-bottom: 10px;
+  text-align: center;
 }
-.section-title::before {
-  content: "";
-  position: absolute;
-  width: 100px; /* Adjust Bottom line */
-  height: 3px;
-  bottom: 0;
-  left: 0; /* Start from the left */
-  background: #ffb200;
-  border-radius: 2px;
+.section-title h2 {
+  font-size: 2.5rem;
+  color: #031550;
+  font-family: "Heebo", sans-serif;
 }
-.section-title.text-center::before {
-  left: 50%; /* Center it when the content is centered */
-  transform: translateX(-50%);
+.section-title p.lead {
+  font-size: 1.1rem;
+  color: #212529;
+  margin-bottom: 50px;
+  font-family: "Nunito", sans-serif;
 }
 
 /* Hover Effects */
@@ -514,7 +510,6 @@ footer .link-animated a:hover {
 .facts-section {
   background-color: #ffb200; /* Set to yellow background */
   padding: 50px 0;
-  /* Responsive Adjustments */
 }
 .facts-section .fact-item {
   background-color: rgba(255, 255, 255, 0.1); /* Light transparent background */
@@ -547,10 +542,65 @@ footer .link-animated a:hover {
   color: #FFFFFF;
   margin-bottom: 0;
 }
-@media (max-width: 768px) {
-  .facts-section .fact-item {
-    margin-bottom: 30px;
-  }
+
+.our-team .team-member {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.our-team .team-member .team-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+}
+.our-team .team-member .team-image img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+.our-team .team-member .team-image .team-hover {
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.our-team .team-member .team-image .team-hover ul {
+  list-style: none;
+  padding: 0;
+}
+.our-team .team-member .team-image .team-hover ul li {
+  display: inline-block;
+  margin: 0 8px;
+}
+.our-team .team-member .team-image .team-hover ul li a {
+  background: #FFFFFF; /* White background for icons */
+  color: #ffb200; /* Theme color for icon */
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Circular shape */
+  font-size: 18px;
+  transition: all 0.3s ease-in-out;
+}
+.our-team .team-member .team-image .team-hover ul li a:hover {
+  background: #ffb200; /* Change background color on hover */
+  color: #FFFFFF; /* White icon color on hover */
+}
+.our-team .team-member:hover .team-image img {
+  transform: scale(1.1); /* Image Zoom */
+}
+.our-team .team-member:hover .team-image .team-hover {
+  opacity: 1; /* Show social icons */
+}
+.our-team .text-theme {
+  color: #ffb200;
 }
 
 /* Banner *
