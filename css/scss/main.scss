@@ -484,6 +484,7 @@ a {
     .carousel-control-prev,
     .carousel-control-next {
         z-index: auto;
+        display: none;
         .carousel-control-prev-icon,
         .carousel-control-next-icon {
             background-color: rgba(0, 0, 0, 0.5); // Optional: Semi-transparent background for icons

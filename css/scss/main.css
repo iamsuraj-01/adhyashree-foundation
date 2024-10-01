@@ -428,6 +428,7 @@ a {
 .carousel .carousel-control-prev,
 .carousel .carousel-control-next {
   z-index: auto;
+  display: none;
 }
 .carousel .carousel-control-prev .carousel-control-prev-icon,
 .carousel .carousel-control-prev .carousel-control-next-icon,
