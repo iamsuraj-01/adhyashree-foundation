@@ -390,29 +390,6 @@ a {
   line-height: 1.5;
 }
 
-/* Footer *
-footer {
-    .navbar-brand img {
-        width: 100px;
-        height: auto;
-        max-width: 100%;
-        pointer-events: none; /* Prevents clicking to protect logo from being downloaded *
-    }
-
-    .footer-contact .form-control {
-        width: 50%;
-    }
-
-    .link-animated {
-        a {
-            transition: .5s;
-            &:hover {
-                padding-left: 10px;
-            }
-        }
-    }
-}
-
 /* Landing Page Start */
 /* Carousel */
 .carousel .carousel-inner .carousel-item {
@@ -486,7 +463,7 @@ footer {
   color: #212529;
 }
 .history-area .vertical-img-container {
-  height: 400px; /* Set height for the vertical image */
+  height: 430px; /* Set height for the vertical image */
   overflow: hidden;
 }
 .history-area .horizontal-img-container {
@@ -898,10 +875,10 @@ footer {
     padding: 0 10px;
   }
   .carousel .carousel-inner .carousel-item .carousel-caption h1 {
-    font-size: 1.5rem;
+    font-size: 1.9rem;
   }
   .carousel .carousel-inner .carousel-item .carousel-caption p {
-    font-size: 1rem;
+    font-size: 1.3rem;
     line-height: 1.5;
   }
   .carousel .carousel-control-prev,
@@ -913,10 +890,10 @@ footer {
     padding: 30px 0;
   }
   .history-area .vertical-img-container {
-    height: 150px; /* Adjust height for mobile */
+    height: 250px; /* Adjust height for mobile */
   }
   .history-area .horizontal-img-container {
-    height: 150px; /* Adjust height for mobile */
+    height: 250px; /* Adjust height for mobile */
   }
   .history-area h2,
   .history-area h1,
@@ -958,14 +935,11 @@ footer {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     z-index: 999;
   }
-  /* Gallery *
-   .gallery {
-       .box {
-           margin: -15px;
-       }
-   }
-
-   /* Facts Counter */
+  /* Gallery */
+  .gallery .box {
+    margin: -15px;
+  }
+  /* Facts Counter */
   .facts {
     position: relative;
     z-index: 1;

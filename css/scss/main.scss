@@ -436,31 +436,6 @@ a {
       }
     }
   }
-  
-
-
-/* Footer *
-footer {
-    .navbar-brand img {
-        width: 100px;
-        height: auto;
-        max-width: 100%;
-        pointer-events: none; /* Prevents clicking to protect logo from being downloaded *
-    }
-
-    .footer-contact .form-control {
-        width: 50%;
-    }
-
-    .link-animated {
-        a {
-            transition: .5s;
-            &:hover {
-                padding-left: 10px;
-            }
-        }
-    }
-}
 
 /* Landing Page Start */
 
@@ -549,7 +524,7 @@ footer {
 
     /* Image Gallery Styling */
     .vertical-img-container {
-        height: 400px; /* Set height for the vertical image */
+        height: 430px; /* Set height for the vertical image */
         overflow: hidden;
     }
 
@@ -1023,11 +998,11 @@ footer {
                     padding: 0 10px; // Adjust padding to fit smaller screens
 
                     h1 {
-                        font-size: 1.5rem; // Smaller font size for titles
+                        font-size: 1.9rem; // Smaller font size for titles
                     }
 
                     p {
-                        font-size: 1rem; // Smaller font size for paragraphs
+                        font-size: 1.3rem; // Smaller font size for paragraphs
                         line-height: 1.5; // Adjust line height for readability
                     }
                 }
@@ -1045,11 +1020,11 @@ footer {
 
         // Mobile Image Gallery Adjustment
         .vertical-img-container {
-            height: 150px; /* Adjust height for mobile */
+            height: 250px; /* Adjust height for mobile */
         }
 
         .horizontal-img-container {
-            height: 150px; /* Adjust height for mobile */
+            height: 250px; /* Adjust height for mobile */
         }
 
         // Center Align Text on Mobile
@@ -1099,7 +1074,7 @@ footer {
         z-index: 999;
     }
 
-   /* Gallery *
+   /* Gallery */
     .gallery {
         .box {
             margin: -15px;
