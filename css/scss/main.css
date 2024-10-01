@@ -631,14 +631,9 @@ footer {
   padding: 50px 0;
 }
 .facts-section .fact-item {
-  background-color: rgba(255, 255, 255, 0.1); /* Light transparent background */
   border-radius: 15px;
   transition: 0.3s ease-in-out;
   text-align: center;
-}
-.facts-section .fact-item:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* Darker on hover */
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15); /* Light shadow effect */
 }
 .facts-section .fact-icon {
   width: 60px;
