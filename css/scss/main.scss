@@ -9,8 +9,8 @@
 }
 
 /* Theme Variables */
-$theme: #ffb200; // theme color
-$theme-secondary: #031550; // Secondary theme color
+$theme: #6a0dad; // theme color
+$theme-secondary: #000; // Secondary theme color
 $white: #FFFFFF; // White color
 $dark: #212529; // Dark color
 
@@ -312,13 +312,140 @@ a {
     }
 }
 
-/* Footer */
+
+.volunteer-section {
+  background: $theme;
+  padding: 100px 0;
+  text-align: center;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: $white;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: $white;
+  }
+
+  .btn-join {
+    background: #000; // Black button
+    color: $white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    transition: 0.5s;
+    box-shadow: inset 0 0 0 50px transparent;
+    &:hover {
+      background: darken($theme-secondary, 10%);
+      box-shadow: inset 0 0 0 0 $theme;
+    }
+  }
+
+  .curve {
+    position: relative;
+    background: #333333;
+    height: 150px;
+    margin-top: -140px;
+    z-index: -1;
+    clip-path: polygon(0 100%, 50% 0, 100% 100%);
+  }
+}
+
+.footer-section {
+    background: #333333;
+    color: $white;
+    padding: 60px 0;
+  
+    .footer-col {
+      margin-bottom: 20px;
+      h4 {
+        font-size: 1.3rem;
+        color: $white;
+        margin-bottom: 20px;
+        text-align: left;
+      }
+      .footer-links {
+        padding: 0;
+        list-style: none;
+        li {
+          margin-bottom: 10px;
+          a {
+            text-decoration: none;
+            color: $white;
+            &:hover {
+              color: $theme;
+            }
+          }
+        }
+      }
+    }
+  
+    // Contact Section Styles
+    .contact-info {
+      padding: 0;
+      list-style: none;
+      li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        i {
+          margin-right: 10px;
+          color: $theme;
+        }
+      }
+    }
+
+    .social-icons {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 15px;
+
+        a {
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            margin: 0 10px;
+            background: lighten($theme, 5%);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 45px;
+            transition: all 0.3s ease;
+
+            i {
+            color: $white;
+            transition: all 0.3s ease;
+            }
+
+            &:hover {
+            background: $theme-secondary;
+            i {
+                color: $white;
+            }
+            }
+        }
+    }
+  
+    .footer-bottom {
+      text-align: center; // Center the bottom footer text
+      p {
+        color: lighten($white, 30%);
+        margin-bottom: 0; // Ensure no extra space at the bottom
+        line-height: 1.5; // Set a consistent line height
+      }
+    }
+  }
+  
+
+
+/* Footer *
 footer {
     .navbar-brand img {
         width: 100px;
         height: auto;
         max-width: 100%;
-        pointer-events: none; /* Prevents clicking to protect logo from being downloaded */
+        pointer-events: none; /* Prevents clicking to protect logo from being downloaded *
     }
 
     .footer-contact .form-control {
@@ -992,11 +1119,6 @@ footer {
         .fact-item {
             margin-bottom: 30px;
         }
-    }
-
-    /* Footer */
-    .footer {
-        padding: 30px 0;
     }
 }
 

@@ -10,20 +10,20 @@
 /* Theme Variables */
 /* Background Colors */
 .bg-theme {
-  background: #ffb200;
+  background: #6a0dad;
 }
 
 .bg-secondary-theme {
-  background: #031550;
+  background: #000;
 }
 
 /* Text Colors */
 .text-theme {
-  color: #ffb200;
+  color: #6a0dad;
 }
 
 .text-secondary-theme {
-  color: #031550;
+  color: #000;
 }
 
 /* Text Alignment */
@@ -100,14 +100,14 @@ a {
 
 .btn-theme {
   color: #FFFFFF;
-  background-color: #ffb200;
-  border-color: #ffb200;
+  background-color: #6a0dad;
+  border-color: #6a0dad;
   border-radius: 50px;
 }
 .btn-theme:hover {
   color: #FFFFFF;
-  background-color: #031550;
-  border-color: #031550;
+  background-color: #000;
+  border-color: #000;
 }
 
 .btn-square, .btn-sm-square, .btn-lg-square {
@@ -149,7 +149,7 @@ a {
 .spinner {
   width: 40px;
   height: 40px;
-  background: #ffb200;
+  background: #6a0dad;
   margin: 100px auto;
   animation: sk-rotateplane 1.2s infinite ease-in-out;
 }
@@ -190,7 +190,7 @@ a {
 }
 .section-title h2 {
   font-size: 2.5rem;
-  color: #031550;
+  color: #000;
   font-family: "Heebo", sans-serif;
 }
 .section-title p.lead {
@@ -207,7 +207,7 @@ a {
   box-shadow: inset 0 0 0 50px transparent;
 }
 .hover-fill:hover {
-  box-shadow: inset 0 0 0 0 #ffb200;
+  box-shadow: inset 0 0 0 0 #6a0dad;
 }
 
 /* Zoom In Effect */
@@ -236,14 +236,14 @@ a {
   transition: 0.5s;
 }
 .navbar .navbar-nav .nav-link:hover, .navbar .navbar-nav .nav-link.active {
-  color: #ffb200;
+  color: #6a0dad;
 }
 .navbar .navbar-nav .show > .nav-link {
-  color: #ffb200;
+  color: #6a0dad;
 }
 .navbar .navbar-toggler {
-  color: #ffb200 !important;
-  border-color: #ffb200 !important;
+  color: #6a0dad !important;
+  border-color: #6a0dad !important;
 }
 .navbar .navbar-toggler:focus {
   box-shadow: none;
@@ -253,7 +253,7 @@ a {
   border-radius: 0;
 }
 .navbar .dropdown-menu .dropdown-item {
-  background-color: #ffb200;
+  background-color: #6a0dad;
   color: #FFFFFF;
   border-bottom: 1px solid #FFFFFF;
   text-align: center;
@@ -261,12 +261,12 @@ a {
   transition: 0.5s;
 }
 .navbar .dropdown-menu .dropdown-item:hover {
-  background-color: #031550;
+  background-color: #000;
   color: #FFFFFF;
 }
 .navbar .dropdown-menu .dropdown-item.active, .navbar .dropdown-menu .dropdown-item:active {
   color: #FFFFFF;
-  background-color: #031550;
+  background-color: #000;
 }
 
 .sticky-top.navbar .navbar-nav .nav-link {
@@ -274,24 +274,143 @@ a {
   color: #212529;
 }
 .sticky-top.navbar .navbar-nav .nav-link:hover, .sticky-top.navbar .navbar-nav .nav-link.active {
-  color: #ffb200;
+  color: #6a0dad;
 }
 
-/* Footer */
-footer .navbar-brand img {
-  width: 100px;
-  height: auto;
-  max-width: 100%;
-  pointer-events: none; /* Prevents clicking to protect logo from being downloaded */
+.volunteer-section {
+  background: #6a0dad;
+  padding: 100px 0;
+  text-align: center;
 }
-footer .footer-contact .form-control {
-  width: 50%;
+.volunteer-section h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #FFFFFF;
 }
-footer .link-animated a {
+.volunteer-section p {
+  font-size: 1.2rem;
+  color: #FFFFFF;
+}
+.volunteer-section .btn-join {
+  background: #000;
+  color: #FFFFFF;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 50px;
   transition: 0.5s;
+  box-shadow: inset 0 0 0 50px transparent;
 }
-footer .link-animated a:hover {
-  padding-left: 10px;
+.volunteer-section .btn-join:hover {
+  background: black;
+  box-shadow: inset 0 0 0 0 #6a0dad;
+}
+.volunteer-section .curve {
+  position: relative;
+  background: #333333;
+  height: 150px;
+  margin-top: -140px;
+  z-index: -1;
+  -webkit-clip-path: polygon(0 100%, 50% 0, 100% 100%);
+          clip-path: polygon(0 100%, 50% 0, 100% 100%);
+}
+
+.footer-section {
+  background: #333333;
+  color: #FFFFFF;
+  padding: 60px 0;
+}
+.footer-section .footer-col {
+  margin-bottom: 20px;
+}
+.footer-section .footer-col h4 {
+  font-size: 1.3rem;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  text-align: left;
+}
+.footer-section .footer-col .footer-links {
+  padding: 0;
+  list-style: none;
+}
+.footer-section .footer-col .footer-links li {
+  margin-bottom: 10px;
+}
+.footer-section .footer-col .footer-links li a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.footer-section .footer-col .footer-links li a:hover {
+  color: #6a0dad;
+}
+.footer-section .contact-info {
+  padding: 0;
+  list-style: none;
+}
+.footer-section .contact-info li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.footer-section .contact-info li i {
+  margin-right: 10px;
+  color: #6a0dad;
+}
+.footer-section .social-icons {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 15px;
+}
+.footer-section .social-icons a {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  margin: 0 10px;
+  background: #790fc5;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 45px;
+  transition: all 0.3s ease;
+}
+.footer-section .social-icons a i {
+  color: #FFFFFF;
+  transition: all 0.3s ease;
+}
+.footer-section .social-icons a:hover {
+  background: #000;
+}
+.footer-section .social-icons a:hover i {
+  color: #FFFFFF;
+}
+.footer-section .footer-bottom {
+  text-align: center;
+}
+.footer-section .footer-bottom p {
+  color: white;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+/* Footer *
+footer {
+    .navbar-brand img {
+        width: 100px;
+        height: auto;
+        max-width: 100%;
+        pointer-events: none; /* Prevents clicking to protect logo from being downloaded *
+    }
+
+    .footer-contact .form-control {
+        width: 50%;
+    }
+
+    .link-animated {
+        a {
+            transition: .5s;
+            &:hover {
+                padding-left: 10px;
+            }
+        }
+    }
 }
 
 /* Landing Page Start */
@@ -349,14 +468,14 @@ footer .link-animated a:hover {
 .history-area h2 {
   font-size: 2.2rem;
   font-family: "Heebo", sans-serif;
-  color: #031550;
+  color: #000;
   letter-spacing: 0.2rem;
 }
 .history-area h1 {
   font-size: 3rem;
   font-weight: 800;
   font-family: "Heebo", sans-serif;
-  color: #ffb200;
+  color: #6a0dad;
   line-height: 1.2;
 }
 .history-area p {
@@ -387,7 +506,7 @@ footer .link-animated a:hover {
 /* Feature */
 .feature-area {
   position: relative;
-  background-color: #ffb200; /* Yellow background */
+  background-color: #6a0dad; /* Yellow background */
   padding: 50px 0;
   overflow: hidden;
   /* Bottom Shape Styling */
@@ -434,7 +553,7 @@ footer .link-animated a:hover {
   font-family: "Nunito", sans-serif;
   font-weight: 700; /* Bold heading */
   font-size: 1.1rem;
-  color: #031550; /* Dark color for heading */
+  color: #000; /* Dark color for heading */
   margin-bottom: 10px;
 }
 .feature-area p {
@@ -450,7 +569,7 @@ footer .link-animated a:hover {
 }
 .featured-causes h2 {
   font-size: 2.5rem;
-  color: #031550;
+  color: #000;
   font-family: "Heebo", sans-serif;
 }
 .featured-causes p.lead {
@@ -483,7 +602,7 @@ footer .link-animated a:hover {
 }
 .featured-causes .cause-item .cause-text h5 {
   font-size: 1.2rem;
-  color: #031550;
+  color: #000;
   font-family: "Heebo", sans-serif;
   font-weight: 700;
 }
@@ -508,7 +627,7 @@ footer .link-animated a:hover {
 
 /* Facts Section Styling */
 .facts-section {
-  background-color: #ffb200; /* Set to yellow background */
+  background-color: #6a0dad; /* Set to yellow background */
   padding: 50px 0;
 }
 .facts-section .fact-item {
@@ -579,7 +698,7 @@ footer .link-animated a:hover {
 }
 .our-team .team-member .team-image .team-hover ul li a {
   background: #FFFFFF; /* White background for icons */
-  color: #ffb200; /* Theme color for icon */
+  color: #6a0dad; /* Theme color for icon */
   width: 40px;
   height: 40px;
   display: flex;
@@ -590,7 +709,7 @@ footer .link-animated a:hover {
   transition: all 0.3s ease-in-out;
 }
 .our-team .team-member .team-image .team-hover ul li a:hover {
-  background: #ffb200; /* Change background color on hover */
+  background: #6a0dad; /* Change background color on hover */
   color: #FFFFFF; /* White icon color on hover */
 }
 .our-team .team-member:hover .team-image img {
@@ -600,7 +719,7 @@ footer .link-animated a:hover {
   opacity: 1; /* Show social icons */
 }
 .our-team .text-theme {
-  color: #ffb200;
+  color: #6a0dad;
 }
 
 /* Banner *
@@ -858,9 +977,5 @@ footer .link-animated a:hover {
   }
   .facts .fact-item {
     margin-bottom: 30px;
-  }
-  /* Footer */
-  .footer {
-    padding: 30px 0;
   }
 }/*# sourceMappingURL=main.css.map */
