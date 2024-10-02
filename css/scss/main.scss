@@ -724,6 +724,8 @@ a {
 }
 
 .our-team {
+    margin-top: 60px;
+    margin-bottom: 60px;
     .team-member {
         position: relative;
         transition: all 0.3s ease-in-out;
@@ -802,11 +804,393 @@ a {
 
 
 
-/* Banner *
+
 .banner {
-    background-size: cover;
-    margin-bottom: 90px;
+  height: 300px; // Set height for the banner
+  position: relative;
+
+  // Dark overlay effect on the banner
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); // Dark overlay
+    z-index: 1;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2; // Ensure text is above the overlay
+  }
+
+  h1 {
+    font-size: 3rem;
+    color: $white; // White text
+    span.text-theme {
+      color: $theme; // Highlight text in theme color
+    }
+  }
+
+  .banner-underline {
+    width: 100px;
+    height: 2px;
+    margin: 0 auto 20px;
+    background: $theme; // Yellow underline
+    border: none;
+  }
+
+  p {
+    font-size: 1rem;
+    color: $white; // Breadcrumb text color
+    span {
+      margin-right: 5px;
+    }
+    .text-theme {
+      color: $theme; // Highlight "About" in theme color
+    }
+  }
 }
+
+// Pages
+
+// About us
+.about-section {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    h2 {
+      font-size: 2.5rem;
+      span.text-theme {
+        color: $theme; // Theme color for highlighting "Adhyashree Foundation"
+      }
+    }
+  
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+  
+    ul {
+      li {
+        margin-bottom: 10px;
+        font-size: 1rem;
+        i {
+          margin-right: 10px;
+        }
+      }
+    }
+  
+    .btn-theme {
+      background: $theme;
+      color: $white;
+      border-radius: 25px;
+      padding: 10px 30px;
+      &:hover {
+        background: darken($theme, 10%);
+        color: $white;
+      }
+    }
+  
+    img {
+      border-radius: 10px;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .section-services {
+    font-family: "Poppins", sans-serif;
+    color: $dark;
+    padding-top: 115px;
+    padding-bottom: 120px;
+  
+    .header-section {
+      margin-bottom: 34px;
+  
+      .title {
+        position: relative;
+        padding-bottom: 14px;
+        margin-bottom: 25px;
+        font-weight: 700;
+        font-size: 32px;
+  
+        &:before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 50px;
+          height: 3px;
+          background-color: $theme; // Use theme color for underline
+          border-radius: 3px;
+        }
+  
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(30px);
+          width: 10px;
+          height: 3px;
+          background-color: $theme-secondary; // Use secondary color for after underline
+          border-radius: 3px;
+        }
+      }
+  
+      .description {
+        font-size: 14px;
+        color: #282828; // Direct muted text color
+      }
+    }
+  
+    .single-service {
+      position: relative;
+      margin-top: 30px;
+      background-color: $white; // Background color of service cards
+      border-radius: 10px;
+      padding: 40px 30px;
+      overflow: hidden;
+  
+      .content {
+        position: relative;
+        z-index: 20;
+      }
+  
+      .circle-before {
+        position: absolute;
+        top: 0;
+        right: 0px;
+        transform: translate(40%, -40%);
+        width:0px;
+        height: 0px;
+        background-color: $theme; // Circle color using theme
+        border-radius: 50%;
+        opacity: 0.5;
+        z-index: 10;
+        transition: all 0.6s;
+      }
+  
+      &:hover .circle-before {
+        width: 100%;
+        height: 100%;
+        transform: none;
+        border: 0;
+        border-radius: 0;
+        opacity: 1;
+      }
+  
+      .icon {
+        display: inline-block;
+        margin-bottom: 26px;
+        width: 70px;
+        height: 70px;
+        background-color: $theme; // Background of the icon using theme color
+        border-radius: 5px;
+        line-height: 70px;
+        text-align: center;
+        color: $white; // Icon color
+        font-size: 30px;
+        transition: all 0.3s;
+      }
+  
+      &:hover .icon {
+        background-color: $white; // Icon background color on hover
+        color: $theme; // Change icon color to theme on hover
+      }
+  
+      .title {
+        margin-bottom: 18px;
+        font-weight: 700;
+        font-size: 23px;
+        transition: color 0.3s;
+      }
+  
+      &:hover .title {
+        color: $white; // Change title color to white on hover
+      }
+  
+      .description {
+        margin-bottom: 20px;
+        font-size: 14px;
+        transition: color 0.3s;
+      }
+  
+      &:hover .description {
+        color: $white; // Change description color to white on hover
+      }
+  
+      a {
+        position: relative;
+        font-size: 18px;
+        color: $dark; // Link color
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+  
+      &:hover a {
+        color: $white; // Change link color to white on hover
+      }
+  
+      a:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: $theme; // Link underline color
+        transition: background-color 0.3s;
+      }
+  
+      &:hover a:after {
+        background-color: $white; // Change link underline to white on hover
+      }
+    }
+  }
+
+// Mission Section
+.parallax-section {
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; // Parallax effect
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    color: $white;
+    text-align: center;
+    position: relative;
+  
+    // Dark Overlay for Better Readability
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6); // Stronger overlay for better text contrast
+      z-index: 1;
+    }
+  
+    .container {
+      position: relative;
+      z-index: 2; // Bring text content above the overlay
+    }
+  
+    h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+  
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+  
+    .btn-theme {
+      background: $theme;
+      color: $dark;
+      padding: 12px 30px;
+      border-radius: 50px;
+      text-transform: uppercase;
+      font-weight: 600;
+      transition: background 0.3s ease-in-out;
+  
+      &:hover {
+        background: lighten($theme, 10%);
+        color: $dark;
+      }
+    }
+  }
+  
+  // Contact
+  .section-contact-us {
+    padding: 50px 0;
+  
+    .section-title {
+      h2 {
+        font-size: 2.5rem;
+        color: $dark;
+        margin-bottom: 15px;
+      }
+  
+      p {
+        font-size: 1.1rem;
+        color: $dark;
+      }
+    }
+  
+    .card {
+      background: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  
+      .card-body {
+        padding: 30px;
+  
+        h4 {
+          font-size: 1.5rem;
+          color: $dark;
+        }
+  
+        p {
+          font-size: 1rem;
+          color: #666666;
+          margin-bottom: 30px;
+        }
+      }
+    }
+  
+    .contact-info {
+      li {
+        margin-bottom: 20px;
+  
+        .icon-circle {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: $theme;
+          color: $white;
+  
+          i {
+            font-size: 1.2rem;
+          }
+        }
+  
+        h6 {
+          font-size: 1rem;
+          margin-bottom: 5px;
+          color: $dark;
+        }
+  
+        span,
+        a {
+          font-size: 1rem;
+          color: #666666;
+          text-decoration: none;
+  
+          &:hover {
+            color: $theme;
+          }
+        }
+      }
+    }
+  
+    .map-container {
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+    }
+  }
+  
+  
 
 /* Service *
 .service-item {
@@ -1054,6 +1438,11 @@ a {
         width: 50px;
         height: 50px;
         font-size: 24px;
+    }
+
+    /* Mission */
+    .parallax-section {
+        min-height: 700px;
     }
 }
 
