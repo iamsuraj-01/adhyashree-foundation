@@ -52,23 +52,7 @@
         }
     });
 
-    // Active Link Based on Current URL
-    const currentUrl = window.location.pathname;
 
-    $(".navbar-nav .nav-link, .navbar-nav .dropdown-item").each(function () {
-        const linkUrl = $(this).attr("href");
-
-        // Check if the current URL matches the link (excluding '#' links)
-        if (currentUrl.includes(linkUrl) && linkUrl !== '#') {
-            $(".navbar-nav .nav-link, .navbar-nav .dropdown-item").removeClass("active"); // Remove active class from all links
-            $(this).addClass("active"); // Add active class to the matched link
-
-            // If it's a dropdown item, make its parent dropdown toggle active
-            if ($(this).hasClass('dropdown-item')) {
-                $(this).closest('.dropdown').find('.nav-link.dropdown-toggle').addClass('active');
-            }
-        }
-    });
 
     // Facts Counter
     $('[data-toggle="counter-up"]').counterUp({
