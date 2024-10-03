@@ -9,7 +9,7 @@
 }
 
 /* Theme Variables */
-$theme: #6a0dad; // theme color
+$theme: #4CAF50; // theme color
 $theme-secondary: #000; // Secondary theme color
 $white: #FFFFFF; // White color
 $dark: #212529; // Dark color
@@ -364,80 +364,6 @@ a {
         }
     }
 }
-
-.donate-modal {
-    .modal-content {
-      z-index: 1055; // Higher z-index to ensure visibility
-      border-radius: 15px;
-      background-color: #ffffff;
-      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
-    }
-  
-    .modal-header {
-      border-bottom: none;
-      h5.modal-title {
-        font-weight: 600;
-        color: $theme; // Use the theme color for the modal title
-      }
-      .btn-close {
-        font-size: 1.1rem;
-      }
-    }
-  
-    .modal-body {
-      .container {
-        padding: 15px 0;
-        .row {
-          align-items: center;
-        }
-      }
-  
-      h4.text-theme {
-        color: $theme; // Use the theme color for headings inside the modal
-        font-weight: 700;
-      }
-  
-      .list-unstyled {
-        li {
-          font-size: 16px;
-          margin-bottom: 8px;
-          strong {
-            color: $theme-secondary; // Highlighted with secondary color
-          }
-        }
-      }
-  
-      p {
-        font-size: 14px;
-        color: #666666; // Muted text color
-      }
-  
-      img {
-        border: 1px solid lighten($theme-secondary, 10%);
-        padding: 10px;
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-      }
-  
-      .text-center p {
-        color: $dark;
-      }
-    }
-  
-    .modal-footer {
-      border-top: none;
-      justify-content: center;
-  
-      .btn-secondary {
-        background: $theme-secondary;
-        color: $white;
-        &:hover {
-          background: darken($theme-secondary, 10%);
-        }
-      }
-    }
-  }
-  
-
 
 .volunteer-section {
   background: $theme;
@@ -873,11 +799,6 @@ a {
     }
 }
 
-
-
-
-
-
 .banner {
   height: 300px; // Set height for the banner
   position: relative;
@@ -1018,7 +939,22 @@ a {
         color: #282828; // Direct muted text color
       }
     }
+    
+    .active-service {
+      background-color: $theme!important; // Background color of service cards
+      .icon {
+        background-color: $white!important; // Background of the icon using theme color
+        color: $theme!important;
+      }
+      .title {
+        color: $white; // Change title color to white on hover
+      }
   
+      .description {
+        color: $white; // Change title color to white on hover
+      }
+    }
+
     .single-service {
       position: relative;
       margin-top: 30px;
@@ -1262,146 +1198,6 @@ a {
       border-radius: 15px;
     }
   }
-  
-  
-
-/* Service *
-.service-item {
-    position: relative;
-    height: 300px;
-    padding: 0 30px;
-    transition: bottom .5s, opacity .5s; // Specify properties to transition
-
-    .service-icon {
-        margin-bottom: 30px;
-        width: 60px;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: $theme;
-        border-radius: 2px;
-        transform: rotate(-45deg);
-
-        .text-white {
-            transform: rotate(45deg);
-        }
-    }
-
-    a.btn {
-        position: absolute;
-        width: 60px;
-        bottom: -48px;
-        left: 50%;
-        margin-left: -30px;
-        opacity: 0;
-        transition: bottom .5s, opacity .5s; // Ensure button transition matches
-    }
-
-    &:hover a.btn {
-        bottom: -24px;
-        opacity: 1;
-    }
-}
-
-/* Gallery *
-.gallery {
-    .box {
-        width: 350px;
-        overflow: hidden;
-        .slide-img {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-            box-sizing: border-box;
-        }
-    }
-}
-
-/* Team *
-.team-item {
-    transition: .5s;
-
-    .team-social {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: .5s;
-
-        a.btn {
-            position: relative;
-            margin: 0 3px;
-            margin-top: 100px;
-            opacity: 0;
-        }
-    }
-
-    &:hover {
-        box-shadow: 0 0 30px #DDDDDD;
-    }
-
-    &:hover .team-social {
-        background: rgba(9, 30, 62, .7);
-    }
-
-    &:hover .team-social a.btn {
-        opacity: 1;
-        margin-top: 0;
-        transition: .3s;
-    }
-
-    &:hover .team-social a.btn:nth-child(2) {
-        transition-delay: .05s;
-    }
-
-    &:hover .team-social a.btn:nth-child(3) {
-        transition-delay: .1s;
-    }
-
-    &:hover .team-social a.btn:nth-child(4) {
-        transition-delay: .15s;
-    }
-}
-
-/* Testimonial *
-.testimonial-carousel{
-    .owl-dots {
-        margin-top: 15px;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-    }
-    .owl-dot {
-        position: relative;
-        display: inline-block;
-        margin: 0 5px;
-        width: 15px;
-        height: 15px;
-        background: #DDDDDD;
-        border-radius: 2px;
-        transition: .5s;
-        &.active {
-            width: 30px;
-            background: $theme;
-        }
-    }
-    .owl-item.center {
-        position: relative;
-        z-index: 1;
-    }
-    .owl-item .testimonial-item {
-        transition: .5s;
-    }
-    .owl-item.center .testimonial-item {
-        background: #FFFFFF;
-        box-shadow: 0 0 20px #DDDDDD;
-    }
-}
   
 /* Media Queries */
 
