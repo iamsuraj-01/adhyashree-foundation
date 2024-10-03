@@ -312,6 +312,132 @@ a {
     }
 }
 
+/* Carousel */
+.carousel {
+    .carousel-inner {
+        .carousel-item {
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 800px; // Adjust as needed
+                object-fit: cover;
+            }
+
+            .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(9, 30, 62, 0.8); // Dark semi-transparent background
+                z-index: 1; // Ensures the overlay is above the image
+            }
+
+            .carousel-caption {
+                position: absolute;
+                top: 50%;
+                left: 30%; // 50% centers the carousel caption by default (adjust percentage to move left or right)
+                transform: translate(-50%, -50%);
+                z-index: 2; // Ensure the caption is above the overlay
+                width: 43%; // Ensure it scales well on different screen sizes
+                padding: 0 15px; // Add some padding to ensure content doesn't touch edges
+
+                h1 {
+                    font-size: 2.8rem;
+                }
+
+                p {
+                    font-size: 1.25rem; // You can adjust the font size for better readability
+                }
+            }
+        }
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        z-index: auto;
+        display: none;
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: rgba(0, 0, 0, 0.5); // Optional: Semi-transparent background for icons
+        }
+    }
+}
+
+.donate-modal {
+    .modal-content {
+      z-index: 1055; // Higher z-index to ensure visibility
+      border-radius: 15px;
+      background-color: #ffffff;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    }
+  
+    .modal-header {
+      border-bottom: none;
+      h5.modal-title {
+        font-weight: 600;
+        color: $theme; // Use the theme color for the modal title
+      }
+      .btn-close {
+        font-size: 1.1rem;
+      }
+    }
+  
+    .modal-body {
+      .container {
+        padding: 15px 0;
+        .row {
+          align-items: center;
+        }
+      }
+  
+      h4.text-theme {
+        color: $theme; // Use the theme color for headings inside the modal
+        font-weight: 700;
+      }
+  
+      .list-unstyled {
+        li {
+          font-size: 16px;
+          margin-bottom: 8px;
+          strong {
+            color: $theme-secondary; // Highlighted with secondary color
+          }
+        }
+      }
+  
+      p {
+        font-size: 14px;
+        color: #666666; // Muted text color
+      }
+  
+      img {
+        border: 1px solid lighten($theme-secondary, 10%);
+        padding: 10px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+      }
+  
+      .text-center p {
+        color: $dark;
+      }
+    }
+  
+    .modal-footer {
+      border-top: none;
+      justify-content: center;
+  
+      .btn-secondary {
+        background: $theme-secondary;
+        color: $white;
+        &:hover {
+          background: darken($theme-secondary, 10%);
+        }
+      }
+    }
+  }
+  
+
 
 .volunteer-section {
   background: $theme;
@@ -438,59 +564,6 @@ a {
   }
 
 /* Landing Page Start */
-
-/* Carousel */
-.carousel {
-    .carousel-inner {
-        .carousel-item {
-            position: relative;
-
-            img {
-                width: 100%;
-                height: 800px; // Adjust as needed
-                object-fit: cover;
-            }
-
-            .overlay {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(9, 30, 62, 0.8); // Dark semi-transparent background
-                z-index: 1; // Ensures the overlay is above the image
-            }
-
-            .carousel-caption {
-                position: absolute;
-                top: 50%;
-                left: 30%; // 50% centers the carousel caption by default (adjust percentage to move left or right)
-                transform: translate(-50%, -50%);
-                z-index: 2; // Ensure the caption is above the overlay
-                width: 43%; // Ensure it scales well on different screen sizes
-                padding: 0 15px; // Add some padding to ensure content doesn't touch edges
-
-                h1 {
-                    font-size: 2.8rem;
-                }
-
-                p {
-                    font-size: 1.25rem; // You can adjust the font size for better readability
-                }
-            }
-        }
-    }
-
-    .carousel-control-prev,
-    .carousel-control-next {
-        z-index: auto;
-        display: none;
-        .carousel-control-prev-icon,
-        .carousel-control-next-icon {
-            background-color: rgba(0, 0, 0, 0.5); // Optional: Semi-transparent background for icons
-        }
-    }
-}
 
 /* History Area Section Styles */
 .history-area {
