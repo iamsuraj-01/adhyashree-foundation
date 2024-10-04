@@ -659,42 +659,8 @@ a {
      object-fit: cover;
   transition: all 0.3s ease-in-out;
 }
-.our-team .team-member .team-image .team-hover {
-  background: rgba(0, 0, 0, 0.5);
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: all 0.3s ease-in-out;
-}
-.our-team .team-member .team-image .team-hover ul {
-  list-style: none;
-  padding: 0;
-}
-.our-team .team-member .team-image .team-hover ul li {
-  display: inline-block;
-  margin: 0 8px;
-}
-.our-team .team-member .team-image .team-hover ul li a {
-  background: #FFFFFF; /* White background for icons */
-  color: #4CAF50; /* Theme color for icon */
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%; /* Circular shape */
-  font-size: 18px;
-  transition: all 0.3s ease-in-out;
-}
-.our-team .team-member .team-image .team-hover ul li a:hover {
-  background: #4CAF50; /* Change background color on hover */
-  color: #FFFFFF; /* White icon color on hover */
-}
 .our-team .team-member:hover .team-image img {
-  transform: scale(1.1); /* Image Zoom */
-}
-.our-team .team-member:hover .team-image .team-hover {
-  opacity: 1; /* Show social icons */
+  transform: scale(1.05); /* Slight Zoom on Hover */
 }
 .our-team .text-theme {
   color: #4CAF50;
