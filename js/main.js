@@ -133,6 +133,47 @@
             $('#autoWidth').removeClass('cs-hidden');
         }
     });
+
+    // Volunteer Form
+    $(document).ready(function() {
+        $("#volunteerForm").on("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const fullName = $("input[name='name']").val();
+            const email = $("input[name='email']").val();
+            const phone = $("input[name='phone']").val();
+            const gender = $("select[name='gender']").val();
+            const location = $("input[name='location']").val();
+            const userMessage = $("textarea[name='message']").val();
+
+            // Create an array for the message lines
+            const messageLines = [
+                `Volunteer Request:`,
+                `Name:     ${fullName}`,
+                `Email:    ${email}`,
+                `Phone:    ${phone}`,
+                `Gender:   ${gender}`,
+                `Location: ${location}`,
+                `Message:  ${userMessage}`
+            ];
+
+            // Join the message lines with line breaks
+            const message = messageLines.join('\n');
+
+            // Detect if the user is on mobile or desktop
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            const whatsappUrl = isMobile 
+                ? `https://wa.me/9897302753?text=${encodeURIComponent(message)}`  // Mobile link
+                : `https://web.whatsapp.com/send?phone=9897302753&text=${encodeURIComponent(message)}`; // WhatsApp Web link
+
+            // Open WhatsApp link
+            window.open(whatsappUrl, '_blank');
+
+            // Show the thank you modal
+            $('#contactthankYouModal').modal('show');
+        });
+    });
+
     
 })(jQuery);
 
