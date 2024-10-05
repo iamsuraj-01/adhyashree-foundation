@@ -122,6 +122,15 @@
         }
     });
 
+    // Gallery Lightbox
+    $(document).ready(function(){
+        // Initialize Lightbox
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true
+        });
+    });
+
     // Gallery Slider
     $('#autoWidth').lightSlider({
         autoWidth: true,
