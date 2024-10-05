@@ -220,7 +220,7 @@ a {
 
 /* Navbar */
 .navbar .navbar-brand img {
-  width: 130px;
+  width: 100px;
   height: auto;
   max-width: 100%;
   pointer-events: none; /* Prevents clicking to protect logo from being downloaded */
@@ -1023,7 +1023,7 @@ a {
     /* Navbar Link */
   }
   .navbar .navbar-brand img {
-    width: 80px;
+    width: 70px;
     max-width: 100%;
     height: auto;
   }
