@@ -103,66 +103,78 @@
 			</div>
 		</section>
 
-		<!-- Volunteer Modal -->
-		<div class="modal fade" id="volunteerModal" tabindex="-1" aria-labelledby="volunteerModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-			  <div class="modal-content">
-				<div class="modal-header">
-				  <h5 class="modal-title" id="volunteerModalLabel">Become a volunteer</h5>
-				  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-				  <form id="volunteerForm">
-					<div class="mb-3">
-					  <label for="name" class="form-label">Full Name</label>
-					  <input type="text" class="form-control" id="name" name="name" required>
-					</div>
-					<div class="mb-3">
-					  <label for="email" class="form-label">Email Address</label>
-					  <input type="email" class="form-control" id="email" name="email" required>
-					</div>
-					<div class="mb-3">
-					  <label for="phone" class="form-label">Phone Number</label>
-					  <input type="tel" class="form-control" id="phone" name="phone" required>
-					</div>
-					<div class="mb-3">
-					  <label for="gender" class="form-label">Gender</label>
-					  <select class="form-control" id="gender" name="gender" required>
-						<option value="">Select Gender</option>
-						<option value="male">Male</option>
-						<option value="female">Female</option>
-						<option value="other">Other</option>
-					  </select>
-					</div>
-					<div class="mb-3">
-					  <label for="location" class="form-label">City/Location</label>
-					  <input type="text" class="form-control" id="location" name="location" required>
-					</div>
-					<div class="mb-3">
-					  <label for="message" class="form-label">Your Message</label>
-					  <textarea class="form-control" id="message" name="message" rows="3" placeholder="Tell us a little about yourself or your motivation to volunteer..." required></textarea>
-					</div>
-					<button type="submit" class="btn btn-theme">Submit</button>
-				  </form>
-		  
-				  <!-- Thank You Modal Start -->
-				  <div class="modal fade" id="contactthankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
-					<div class="modal-dialog modal-dialog-centered">
-					  <div class="modal-content">
-						<div class="modal-body text-dark text-center">
-						  Thank you for reaching out! We will get back to you soon.
-						</div>
-						<div class="modal-footer">
-						  <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-						</div>
-					  </div>
-					</div>
-				  </div>
-				  <!-- Thank You Modal End -->
-				</div>
-			  </div>
-			</div>
-		  </div>
+<!-- Volunteer Section -->
+<section class="volunteer-section">
+    <div class="container text-center">
+      <h1 class="wow fadeInUp">Become a Volunteer</h1>
+      <p class="wow fadeInUp" data-wow-delay="0.2s">Join us to participate yourself for mankind</p>
+      <button type="button" class="btn btn-join wow fadeInUp" data-wow-delay="0.4s" data-bs-toggle="modal" data-bs-target="#volunteerModal">
+        Join Now
+      </button>
+    </div>
+    <div class="curve wow fadeIn" data-wow-delay="0.6s"></div>
+  </section>
+  
+  <!-- Volunteer Modal -->
+  <div class="modal fade" id="volunteerModal" tabindex="-1" aria-labelledby="volunteerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="volunteerModalLabel">Become a volunteer</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="volunteerForm">
+            <div class="mb-3">
+              <label for="name" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" id="phone" name="phone" required>
+            </div>
+            <div class="mb-3">
+              <label for="gender" class="form-label">Gender</label>
+              <select class="form-control" id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="location" class="form-label">City/Location</label>
+              <input type="text" class="form-control" id="location" name="location" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Your Message</label>
+              <textarea class="form-control" id="message" name="message" rows="3" placeholder="Tell us a little about yourself or your motivation to volunteer..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-theme">Submit</button>
+          </form>
+  
+          <!-- Thank You Modal Start -->
+          <div class="modal fade" id="contactthankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-body text-dark text-center">
+                  Thank you for reaching out! We will get back to you soon.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Thank You Modal End -->
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 		<footer class="footer-section">
