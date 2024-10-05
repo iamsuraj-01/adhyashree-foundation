@@ -434,20 +434,71 @@ a {
       }
     }
   
-    // Contact Section Styles
-    .contact-info {
-      padding: 0;
-      list-style: none;
-      li {
+   // Contact Section Styles
+   .contact-info {
+    padding: 0;
+    list-style: none;
+  
+    li {
+      display: flex;
+      align-items: center; // Center items vertically
+      margin-bottom: 20px; // Maintain spacing between items
+      flex-wrap: nowrap; // Prevent text wrapping
+  
+      .icon-circle {
         display: flex;
         align-items: center;
-        margin-bottom: 10px;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: $theme; // Use theme color for circle
+        margin-right: 15px; // Spacing between icon and text container
+  
         i {
-          margin-right: 10px;
-          color: $theme;
+          color: #fff;
+          font-size: 24px; // Icon size inside the circle
+        }
+      }
+  
+      // Text Container
+      div {
+        flex-grow: 1; // Allow the text container to take remaining space
+        h6 {
+          margin: 0;
+          font-weight: 600;
+        }
+        span {
+          line-height: 1.4; // Ensure consistent line height
+          font-size: 16px; // Adjust font size
+          display: inline; // Prevent span from causing a line break
         }
       }
     }
+  
+    // Mobile View Adjustments
+    @media (max-width: 576px) {
+      li {
+        align-items: center; // Ensure uniform alignment for smaller screens
+        flex-wrap: nowrap; // Prevent wrapping of text on small screens
+        margin-bottom: 15px;
+  
+        .icon-circle {
+          width: 40px;
+          height: 40px; // Smaller circle size for mobile
+          margin-right: 10px; // Adjust spacing for compact view
+        }
+  
+        div {
+          h6, span {
+            font-size: 14px; // Smaller font for mobile screens
+          }
+        }
+      }
+    }
+  }
+  
+
 
     .social-icons {
     display: flex;

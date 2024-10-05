@@ -395,11 +395,49 @@ a {
 .footer-section .contact-info li {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  flex-wrap: nowrap;
 }
-.footer-section .contact-info li i {
-  margin-right: 10px;
-  color: #4CAF50;
+.footer-section .contact-info li .icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #4CAF50;
+  margin-right: 15px;
+}
+.footer-section .contact-info li .icon-circle i {
+  color: #fff;
+  font-size: 24px;
+}
+.footer-section .contact-info li div {
+  flex-grow: 1;
+}
+.footer-section .contact-info li div h6 {
+  margin: 0;
+  font-weight: 600;
+}
+.footer-section .contact-info li div span {
+  line-height: 1.4;
+  font-size: 16px;
+  display: inline;
+}
+@media (max-width: 576px) {
+  .footer-section .contact-info li {
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-bottom: 15px;
+  }
+  .footer-section .contact-info li .icon-circle {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  .footer-section .contact-info li div h6, .footer-section .contact-info li div span {
+    font-size: 14px;
+  }
 }
 .footer-section .social-icons {
   display: flex;
