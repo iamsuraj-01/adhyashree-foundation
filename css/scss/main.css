@@ -220,7 +220,7 @@ a {
 
 /* Navbar */
 .navbar .navbar-brand img {
-  width: 100px;
+  width: 130px;
   height: auto;
   max-width: 100%;
   pointer-events: none; /* Prevents clicking to protect logo from being downloaded */
@@ -229,7 +229,7 @@ a {
   position: relative;
   margin-left: 25px;
   padding: 35px 0;
-  color: #FFFFFF;
+  color: #212529;
   font-size: 18px;
   font-weight: 600;
   outline: none;
@@ -1027,8 +1027,8 @@ a {
     /* Navbar Link */
   }
   .navbar .navbar-brand img {
-    width: 70px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 80px;
     height: auto;
   }
   .navbar .navbar-nav .nav-link, .navbar .navbar-nav .nav-link.show {
@@ -1101,15 +1101,16 @@ a {
     width: 100%;
     background: #FFFFFF;
   }
-  /* Comment out or remove the below navbar code if you want the carousel below the navbar */
+  /* Comment out or remove the below navbar code if you want the carousel below the navbar 
   .navbar {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    z-index: 999;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      border-bottom: 1px solid rgba(256, 256, 256, .1);
+      z-index: 999;
   }
+      */
   /* Gallery */
   .gallery .box {
     margin: -15px;
