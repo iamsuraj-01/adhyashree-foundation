@@ -531,6 +531,7 @@ a {
     p {
       font-size: 14px;
       line-height: 1.6;
+      text-align: justify;
     }
 
     .social-icons {
@@ -981,172 +982,70 @@ a {
   }
 
   .section-services {
-    font-family: "Poppins", sans-serif;
-    color: $dark;
     padding-top: 115px;
     padding-bottom: 120px;
   
-    .header-section {
-      margin-bottom: 34px;
-  
-      .title {
-        position: relative;
-        padding-bottom: 14px;
-        margin-bottom: 25px;
-        font-weight: 700;
-        font-size: 32px;
-  
-        &:before {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 50px;
-          height: 3px;
-          background-color: $theme; // Use theme color for underline
-          border-radius: 3px;
-        }
-  
-        &:after {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 50%;
-          transform: translateX(30px);
-          width: 10px;
-          height: 3px;
-          background-color: $theme-secondary; // Use secondary color for after underline
-          border-radius: 3px;
-        }
-      }
-  
-      .description {
-        font-size: 14px;
-        color: #282828; // Direct muted text color
-      }
-    }
-    
-    .active-service {
-      background-color: $theme!important; // Background color of service cards
-      .icon {
-        background-color: $white!important; // Background of the icon using theme color
-        color: $theme!important;
-      }
-      .title {
-        color: $white; // Change title color to white on hover
-      }
-  
-      .description {
-        color: $white; // Change title color to white on hover
-      }
-    }
-
     .single-service {
       position: relative;
-      margin-top: 30px;
-      background-color: $white; // Background color of service cards
-      border-radius: 10px;
-      padding: 40px 30px;
       overflow: hidden;
+      border-radius: 15px;
+      transition: transform 0.3s ease;
   
-      .content {
-        position: relative;
-        z-index: 20;
-      }
-  
-      .circle-before {
-        position: absolute;
-        top: 0;
-        right: 0px;
-        transform: translate(40%, -40%);
-        width:0px;
-        height: 0px;
-        background-color: $theme; // Circle color using theme
-        border-radius: 50%;
-        opacity: 0.5;
-        z-index: 10;
-        transition: all 0.6s;
-      }
-  
-      &:hover .circle-before {
+      .img-container {
         width: 100%;
-        height: 100%;
-        transform: none;
-        border: 0;
-        border-radius: 0;
-        opacity: 1;
-      }
-  
-      .icon {
-        display: inline-block;
-        margin-bottom: 26px;
-        width: 70px;
-        height: 70px;
-        background-color: $theme; // Background of the icon using theme color
-        border-radius: 5px;
-        line-height: 70px;
-        text-align: center;
-        color: $white; // Icon color
-        font-size: 30px;
-        transition: all 0.3s;
-      }
-  
-      &:hover .icon {
-        background-color: $white; // Icon background color on hover
-        color: $theme; // Change icon color to theme on hover
-      }
-  
-      .title {
-        margin-bottom: 18px;
-        font-weight: 700;
-        font-size: 23px;
-        transition: color 0.3s;
-      }
-  
-      &:hover .title {
-        color: $white; // Change title color to white on hover
-      }
-  
-      .description {
-        margin-bottom: 20px;
-        font-size: 14px;
-        transition: color 0.3s;
-      }
-  
-      &:hover .description {
-        color: $white; // Change description color to white on hover
-      }
-  
-      a {
+        height: 350px; // Set a consistent height for all cards
+        background-size: cover;
+        background-position: center;
+        border-radius: 15px;
+        overflow: hidden;
         position: relative;
-        font-size: 18px;
-        color: $dark; // Link color
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.3s;
+        transition: transform 0.3s ease-in-out;
+  
+        .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.6); // Dark overlay over the image
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          text-align: center;
+          color: #fff;
+          padding: 20px;
+          opacity: 1;
+          transition: opacity 0.3s ease-in-out;
+  
+          .title {
+            margin-bottom: 15px;
+            font-size: 20px;
+            font-weight: 700;
+          }
+  
+          .description {
+            font-size: 14px;
+            line-height: 1.5;
+            padding: 0 10px;
+          }
+        }
       }
   
-      &:hover a {
-        color: $white; // Change link color to white on hover
+      &:hover .img-container {
+        transform: scale(1.1); // Zoom effect on hover
       }
   
-      a:after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 1px;
-        background-color: $theme; // Link underline color
-        transition: background-color 0.3s;
+      &:hover .overlay {
+        background: $theme; // Darker overlay on hover
       }
   
-      &:hover a:after {
-        background-color: $white; // Change link underline to white on hover
+      &:hover {
+        transform: translateY(-5px); // Lift the entire card on hover
       }
     }
   }
+  
 
 // Mission Section
 .parallax-section {
