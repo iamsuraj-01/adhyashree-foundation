@@ -405,141 +405,215 @@ a {
   }
 }
 
-.footer-section {
-    background: #333333;
-    color: $white;
-    padding: 60px 0;
-  
-    .footer-col {
-      margin-bottom: 20px;
-      h4 {
-        font-size: 1.3rem;
-        color: $white;
-        margin-bottom: 20px;
-        text-align: left;
-      }
-      .footer-links {
-        padding: 0;
-        list-style: none;
-        li {
-          margin-bottom: 10px;
-          a {
-            text-decoration: none;
-            color: $white;
-            &:hover {
-              color: $theme;
-            }
-          }
-        }
-      }
-    }
-  
-   // Contact Section Styles
-   .contact-info {
+.section-contact-us {
+  overflow-x: hidden; // Prevent unwanted horizontal scrolling
+
+  .contact-info {
     padding: 0;
     list-style: none;
-  
-    li {
+    
+    // Common styles for contact items
+    .contact-item {
       display: flex;
-      align-items: center; // Center items vertically
-      margin-bottom: 20px; // Maintain spacing between items
-      flex-wrap: nowrap; // Prevent text wrapping
-  
+      align-items: flex-start; // Align items from top
+      margin-bottom: 20px; // Spacing between items
+
+      // Icon Circle Styling
       .icon-circle {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background-color: $theme; // Use theme color for circle
-        margin-right: 15px; // Spacing between icon and text container
-  
+        width: 50px; // Fixed width for desktop view
+        height: 50px; // Fixed height for desktop view
+        border-radius: 50%; // Circular shape
+        background-color: $theme; // Theme color
+        min-width: 50px; // Prevent flex from stretching the circle
+        min-height: 50px;
+        margin-right: 10px; // Adjust spacing to prevent overflow
+        
         i {
-          color: #fff;
-          font-size: 24px; // Icon size inside the circle
+          font-size: 24px;
+          color: #fff; // White color for icons inside
         }
       }
-  
-      // Text Container
-      div {
-        flex-grow: 1; // Allow the text container to take remaining space
+
+      // Contact Text Styles
+      .contact-text {
+        flex-grow: 1;
+        margin-left: 10px; // Space between icon and text for mobile responsiveness
+        overflow: hidden; // Prevent text overflow
+
         h6 {
           margin: 0;
           font-weight: 600;
+          font-size: 16px; // Consistent font size for heading
+          word-break: break-word; // Break long words to avoid overflow
         }
-        span {
-          line-height: 1.4; // Ensure consistent line height
-          font-size: 16px; // Adjust font size
-          display: inline; // Prevent span from causing a line break
+
+        p {
+          margin: 0;
+          font-size: 15px;
+          line-height: 1.5;
         }
       }
     }
-  
-    // Mobile View Adjustments
+
+    // Responsive Adjustments
     @media (max-width: 576px) {
-      li {
-        align-items: center; // Ensure uniform alignment for smaller screens
-        flex-wrap: nowrap; // Prevent wrapping of text on small screens
-        margin-bottom: 15px;
-  
+      padding-left: 0; // Remove padding for mobile view
+      padding-right: 0;
+
+      .contact-item {
+        margin-bottom: 15px; // Reduce spacing for mobile
+
+        // Adjustments for icon circle size
         .icon-circle {
-          width: 40px;
-          height: 40px; // Smaller circle size for mobile
-          margin-right: 10px; // Adjust spacing for compact view
+          width: 40px; // Smaller circle size for mobile view
+          height: 40px;
+          min-width: 40px;
+          min-height: 40px;
+          margin-right: 8px; // Adjust spacing for mobile
+
+          i {
+            font-size: 18px; // Smaller icon size for mobile
+          }
         }
-  
-        div {
-          h6, span {
-            font-size: 14px; // Smaller font for mobile screens
+
+        .contact-text {
+          margin-left: 5px; // Reduce spacing for compact view
+
+          h6 {
+            font-size: 14px; // Smaller heading for mobile
+          }
+
+          p {
+            font-size: 14px; // Smaller paragraph for mobile
+            word-break: break-word; // Prevent long words from overflowing
           }
         }
       }
     }
   }
-  
 
+  // Ensure Google Maps Iframe is Responsive
+  .map-container {
+    max-width: 100%; // Prevent overflow in the container
+    overflow: hidden;
+
+    iframe {
+      width: 100% !important; // Force the iframe to fit within its container
+      max-width: 100%; // Ensure the iframe does not exceed container width
+    }
+  }
+}
+
+.gallery-page {
+  img {
+    border-radius: 50px;
+  }
+}
+
+// Footer Section Styles
+.footer-section {
+  background: #212529;
+  color: #ffffff;
+  padding: 60px 0;
+
+  .footer-col {
+    margin-bottom: 30px;
+
+    h4 {
+      font-size: 18px;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.6;
+    }
 
     .social-icons {
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 15px;
+      a {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        border-radius: 50%;
+        background: $theme;
+        color: #ffffff;
+        margin-right: 10px;
+        transition: all 0.3s ease;
 
-        a {
-            display: inline-block;
-            width: 45px;
-            height: 45px;
-            margin: 0 10px;
-            background: lighten($theme, 5%);
-            border-radius: 50%;
-            text-align: center;
-            line-height: 45px;
-            transition: all 0.3s ease;
-
-            i {
-            color: $white;
-            transition: all 0.3s ease;
-            }
-
-            &:hover {
-            background: $theme-secondary;
-            i {
-                color: $white;
-            }
-            }
+        &:hover {
+          background: lighten($theme, 10%);
         }
-    }
-  
-    .footer-bottom {
-      text-align: center; // Center the bottom footer text
-      p {
-        color: lighten($white, 30%);
-        margin-bottom: 0; // Ensure no extra space at the bottom
-        line-height: 1.5; // Set a consistent line height
       }
     }
   }
 
+  .footer-links {
+    padding: 0;
+    list-style: none;
+
+    li {
+      margin-bottom: 10px;
+
+      a {
+        color: #ffffff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $theme;
+        }
+      }
+    }
+  }
+
+  .contact-info {
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+
+      i {
+        margin-right: 10px;
+        color: $theme;
+      }
+    }
+  }
+
+  .contact-info li + li {
+    margin-top: 15px;
+  }
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 15px 0;
+  text-align: center;
+  color: #999;
+
+  p {
+    margin-bottom: 0;
+    font-size: 14px;
+
+    a {
+      color: #ffffff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $theme;
+      }
+    }
+  }
+}
 /* Landing Page Start */
 
 /* History Area Section Styles */
